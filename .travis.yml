@@ -2,6 +2,7 @@ dist: trusty
 sudo: false
 
 language: go
+go_import_path: github.com/omniscale/imposm3
 
 go:
   - "1.9.x"
@@ -126,11 +127,10 @@ before_deploy:
 deploy:
   provider: releases
   api_key:
-    secure: BLksCdG9x/D3Giprtq1VtFGQSF2k9+0OjeOL2bjAaf/4mFho1IDGsJlsOEKBNUngacHIB2udoHeta4Cijs6NLCQrzHcO1la6djF/HYJ5oCFkM7RxPWK5Zim4b2FB8ktVEX20VOjPpsDrBi56P97YI7bVVrOaSThashz4bpj/3Z4=
+    secure: e/ORBKHrg04y/FJGx1y4s1VT/GSiVHgofVSBXDEwtGzWaoVO0U1HYUt6vgxaIXVi+U1QY/NFljhSQDuE04IkojoOc8Iojqwh6XCgPxVzyJbbUglyFFsvN9A6V8ybpcGNKMLzaSxkuapVTp+1qTxPuyuuavCSGOwbkFxW4ma17xd/Vv6oWSS0EuEFNOaGOxfEPJysrs0xQdsUlGnfzdeD4h0x/B1GhxKbUKxIaF1THsCvZGZolz975YZMI49q/XtqSweSXXNr7N4EKFceWlIHEEBgVvi5LEFmin8/lG/gMKGw9T4yjVkL8fZfdzTd58a4NktRLpZn54V6da5i2yAtCYjUKHUs8jueLttr+bnhNKwaP7ElJRXwWmUOznbt0wOjvFW344jWb+yIFSdeaVRHYRqb+Iecm6NDJBTsMebndwAux1HVBGFPYKSZELCvY0d4gG3sTNgoIYS84iJOZPxI9zcsWO+6Ieo5Sm5fFtfr5qC0XO2mqOofziipOGqH0h8QAGzhUYhpleDCVX5qLucfuYOvcXNR7+btUy619GeUg/ea1D7xzjmn3E/8HspiaHG4yE5pdKfW/9Lw20UEkQR5HRL5hhBUEUoP+dHYPDqUXIHraX6MlH2AnCcnYfkRKRivLKW4Qyw2OXJ07ZmBaEqjDP1KcXIpA8IKswXQkwnNvG4=
   file: /tmp/imposm-${BUILD_VERSION}.tar.gz
   skip_cleanup: true
   on:
-    repo: omniscale/imposm3
+    repo: amatissart/imposm3
     tags: true
     condition: $TRAVIS_GO_VERSION =~ ^1\.13
-
